@@ -1,0 +1,6 @@
+{
+  "name": "voidwing-flappy",
+  "displayName": "VOIDWING: Между мирами",
+  "description": "Красивая аркада в стиле Flappy Bird с чёрной дырой и сменой мира каждые 50 очков",
+  "instantAppType": "html"
+}

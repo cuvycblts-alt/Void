@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#090b20" />
+  <title>VOIDWING</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main id="game-shell" aria-label="VOIDWING — игра между мирами">
+    <canvas id="game" aria-label="Игровое поле"></canvas>
+
+    <section id="hud" class="hidden" aria-live="polite">
+      <div class="world-chip">
+        <span class="world-dot"></span>
+        <div><small>МИР <b id="world-number">01</b></small><strong id="world-name">АЭТЕРИЯ</strong></div>
+      </div>
+      <div class="score-wrap"><span id="score">0</span><small>ОЧКОВ</small></div>
+      <div class="sound-control"><button id="sound" aria-label="Включить или выключить звук">♪</button></div>
+      <div class="rift-meter"><span id="rift-fill"></span><em id="rift-label">50 ДО РАЗЛОМА</em></div>
+    </section>
+
+    <section id="start-screen" class="overlay">
+      <div class="brand"><span class="eyebrow">ПОЛЁТ СКВОЗЬ НЕВОЗМОЖНОЕ</span><h1>VOID<span>WING</span></h1><p>Каждые 50 очков реальность заканчивается.<br>Но твой полёт — нет.</p></div>
+      <button id="start-button" class="main-button"><i>▶</i><span>НАЧАТЬ ПОЛЁТ<small>ПРОБЕЛ · КЛИК · ТАП</small></span></button>
+      <div class="tip"><b>ЦЕЛЬ</b><span>Пройди сквозь разлом и открой новый мир</span></div>
+    </section>
+
+    <section id="death-cinematic" class="death-cinematic hidden" aria-live="assertive">
+      <div class="death-flash"></div>
+      <div class="death-band">
+        <strong>ПОЛЁТ ОКОНЧЕН</strong>
+        <span>СИГНАЛ ПТИЦЫ ПОТЕРЯН</span>
+      </div>
+    </section>
+
+    <section id="game-over" class="overlay hidden">
+      <div class="over-card">
+        <span class="eyebrow">СИГНАЛ ПОТЕРЯН</span><h2>ПОЛЁТ<br>ОКОНЧЕН</h2>
+        <div class="stats"><div><span id="final-score">0</span><small>СЧЁТ</small></div><div class="line"></div><div><span id="best-score">0</span><small>РЕКОРД</small></div></div>
+        <button id="restart-button" class="main-button"><i>↻</i><span>ЕЩЁ РАЗ<small>ВЕРНУТЬСЯ В НЕБО</small></span></button>
+      </div>
+    </section>
+
+    <section id="world-card" class="world-reveal hidden" aria-live="assertive">
+      <small>ПРОСТРАНСТВЕННЫЙ СКАЧОК</small><h2 id="reveal-name">НЕОНОВЫЙ ПРИЛИВ</h2><p id="reveal-tagline">Мир помнит каждый твой взмах</p>
+    </section>
+
+    <div class="vignette"></div><div class="grain"></div>
+  </main>
+  <script src="./game.js"></script>
+</body>
+</html>
